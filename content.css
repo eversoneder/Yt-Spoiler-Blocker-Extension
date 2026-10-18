@@ -1,0 +1,119 @@
+/*
+ * Each rule is gated by an attribute that content.js sets on <html>.
+ * Pure CSS means YouTube re-rendering the player (keypress, hover, navigation)
+ * can never bring an element back, and nothing flashes while the page loads.
+ *
+ * Class names below are YouTube's and may change over time; if a toggle stops
+ * working, this is the file to update.
+ */
+
+/* ---------- Video player ---------- */
+
+html[data-ysb-progress-bar] .ytp-progress-bar-container,
+html[data-ysb-progress-bar] .ytp-progress-bar,
+html[data-ysb-progress-bar] .ytp-scrubber-container,
+html[data-ysb-progress-bar] .ytp-chrome-bottom .ytp-progress-list,
+html[data-ysb-progress-bar] .ytp-fine-scrubbing-container,
+html[data-ysb-progress-bar] .ytp-miniplayer-scrim,
+html[data-ysb-progress-bar] ytd-miniplayer #progress-bar,
+html[data-ysb-progress-bar] ytd-miniplayer tp-yt-paper-progress {
+  display: none !important;
+}
+
+html[data-ysb-time-display] .ytp-time-current,
+html[data-ysb-time-display] .ytp-time-separator,
+html[data-ysb-time-display] .ytp-time-duration {
+  display: none !important;
+}
+
+html[data-ysb-hover-preview] .ytp-tooltip.ytp-preview,
+html[data-ysb-hover-preview] .ytp-tooltip-bg,
+html[data-ysb-hover-preview] .ytp-storyboard-framepreview,
+html[data-ysb-hover-preview] .ytp-fine-scrubbing {
+  display: none !important;
+}
+
+html[data-ysb-chapters] .ytp-chapters-container,
+html[data-ysb-chapters] .ytp-chapter-container,
+html[data-ysb-chapters] .ytp-chapter-title-content,
+html[data-ysb-chapters] .ytp-chapter-hover-container,
+html[data-ysb-chapters] .ytp-tooltip-title {
+  display: none !important;
+}
+
+html[data-ysb-most-replayed] .ytp-heat-map-container,
+html[data-ysb-most-replayed] .ytp-heat-map-chapter,
+html[data-ysb-most-replayed] .ytp-heat-map,
+html[data-ysb-most-replayed] .ytp-timed-markers-container {
+  display: none !important;
+}
+
+html[data-ysb-seek-animation] .ytp-doubletap-ui-legacy,
+html[data-ysb-seek-animation] .ytp-doubletap-ui,
+html[data-ysb-seek-animation] .ytp-seek-overlay,
+html[data-ysb-seek-animation] .ytp-bezel-text-wrapper {
+  display: none !important;
+}
+
+/* ---------- Thumbnails & lists ---------- */
+
+html[data-ysb-thumb-progress] ytd-thumbnail-overlay-resume-playback-renderer,
+html[data-ysb-thumb-progress] yt-thumbnail-overlay-progress-bar-view-model,
+html[data-ysb-thumb-progress] .ytThumbnailOverlayProgressBarHost,
+html[data-ysb-thumb-progress] .yt-thumbnail-overlay-progress-bar-view-model-host {
+  display: none !important;
+}
+
+html[data-ysb-duration-badges] ytd-thumbnail-overlay-time-status-renderer,
+html[data-ysb-duration-badges] yt-thumbnail-badge-view-model,
+html[data-ysb-duration-badges] .yt-badge-shape--thumbnail-default,
+html[data-ysb-duration-badges] .badge-shape-wiz--thumbnail-default,
+html[data-ysb-duration-badges] .ytd-thumbnail-overlay-time-status-renderer {
+  display: none !important;
+}
+
+/* ---------- Rest of the page ---------- */
+
+html[data-ysb-description-chapters] ytd-macro-markers-list-renderer,
+html[data-ysb-description-chapters] ytd-macro-markers-list-item-renderer,
+html[data-ysb-description-chapters] ytd-horizontal-card-list-renderer,
+html[data-ysb-description-chapters] ytd-engagement-panel-section-list-renderer[target-id="engagement-panel-macro-markers-description-chapters"],
+html[data-ysb-description-chapters] ytd-engagement-panel-section-list-renderer[target-id="engagement-panel-macro-markers-auto-chapters"],
+html[data-ysb-description-chapters] ytd-engagement-panel-section-list-renderer[target-id="engagement-panel-macro-markers-problem-walkthroughs"] {
+  display: none !important;
+}
+
+html[data-ysb-comments] ytd-comments,
+html[data-ysb-comments] #comments {
+  display: none !important;
+}
+
+html[data-ysb-sidebar] #related,
+html[data-ysb-sidebar] ytd-watch-next-secondary-results-renderer,
+html[data-ysb-sidebar] .ytp-endscreen-content,
+html[data-ysb-sidebar] .ytp-ce-element,
+html[data-ysb-sidebar] .ytp-suggestion-set {
+  display: none !important;
+}
+
+/* ---------- Toast shown by the Alt+Shift+S shortcut ---------- */
+
+#ysb-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 40px;
+  transform: translateX(-50%);
+  z-index: 2147483647;
+  padding: 10px 18px;
+  border-radius: 8px;
+  background: rgba(20, 20, 20, 0.92);
+  color: #fff;
+  font: 500 14px/1.2 Roboto, Arial, sans-serif;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+#ysb-toast.ysb-visible {
+  opacity: 1;
+}

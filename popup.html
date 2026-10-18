@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>YT Spoiler Blocker</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header class="master">
+    <div class="master-text">
+      <h1>YT Spoiler Blocker</h1>
+      <p id="master-status" aria-live="polite"></p>
+    </div>
+    <label class="switch switch-lg">
+      <input type="checkbox" id="master" aria-label="Enable spoiler blocking">
+      <span class="slider"></span>
+    </label>
+  </header>
+
+  <main id="groups"></main>
+
+  <footer>
+    <div class="actions">
+      <button type="button" id="all-on">All on</button>
+      <button type="button" id="all-off">All off</button>
+      <button type="button" id="reset">Reset</button>
+    </div>
+    <p class="hint">Shortcut on YouTube: <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>S</kbd> toggles everything. Changes apply instantly.</p>
+  </footer>
+
+  <script src="options.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
