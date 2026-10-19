@@ -11,15 +11,11 @@
   <img alt="No tracking" src="https://img.shields.io/badge/data%20collected-none-brightgreen">
 </p>
 
-<p align="center">
-  <a href="assets/imgs/extension-showcase-on-youtube.png">
-    <img src="assets/imgs/extension-showcase-on-youtube.png" alt="YT Spoiler Blocker running on a YouTube match: the player has no progress bar or time readout, and the extension popup is open with its toggles" width="900">
-  </a>
-</p>
+https://github.com/user-attachments/assets/2475e95c-ddc2-49b7-9a51-9f02184bf63c
 
 ## The problem
 
-You're watching a recorded best-of-3. Team A wins game 1. You glance at the player: the video is **10 minutes** long and game 1 took 5. Team A must have won 2-0, and the rest of the video is spoiled before you've watched it.
+You're watching a recorded best-of-3. Team A wins game 1. Then you look at the **video progress bar** at the bottom of the YouTube video: the total time next to it says **10:00**, and game 1 only took 5 minutes. Team A must have won 2-0, and the rest of the video is spoiled before you've watched it.
 
 Progress bars, durations, hover thumbnails, chapter lists and "Most replayed" graphs all leak this kind of information. YT Spoiler Blocker hides them, and it keeps them hidden when you hover over the video, hover over the timeline, or press <kbd>M</kbd>, <kbd>C</kbd>, <kbd>K</kbd>, <kbd>Space</kbd> or the arrow keys.
 
