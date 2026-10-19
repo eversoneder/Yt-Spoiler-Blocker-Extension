@@ -11,7 +11,16 @@
   <img alt="No tracking" src="https://img.shields.io/badge/data%20collected-none-brightgreen">
 </p>
 
+<p align="center">
+  <img src="assets/imgs/yt-spoiler-extension-video-showcase-gif-half.gif" alt="Animated demo: with YT Spoiler Blocker on, the YouTube video has no progress bar, time or hover preview, even when hovering the video or pressing keyboard keys" width="900">
+</p>
+
+<details>
+<summary><b>▶ Watch the full demo video</b> (pause, rewind, sound)</summary>
+
 https://github.com/user-attachments/assets/2475e95c-ddc2-49b7-9a51-9f02184bf63c
+
+</details>
 
 ## The problem
 
@@ -41,9 +50,20 @@ Every item below has its own switch, plus a master on/off switch at the top.
 - 🌗 **Light and dark popup**, following your system theme.
 - 🔒 **Private**: no tracking, no network requests, no data collected. It only runs on YouTube pages.
 
-## Install
+## Supported devices
 
-It isn't on the Chrome Web Store, so you load it manually. It takes about a minute and works on any computer.
+| Where | Status |
+| --- | --- |
+| 💻 **Desktop Chrome, Edge, Brave, Opera, Vivaldi** (Windows, macOS, Linux) | ✅ Supported |
+| 🦊 Desktop Firefox | ⚠️ Not tested (needs a small manifest change) |
+| 🧭 **Safari** (Mac, iPhone, iPad) | ❌ Not supported |
+| 📱 **Phones and tablets** (Android, iPhone, iPad) | ❌ Not supported yet |
+
+**Why not on mobile?** The YouTube app can't run extensions at all, and the regular Chrome app on Android doesn't let you install your own. The extension is also written for YouTube's desktop layout, and the mobile YouTube website (`m.youtube.com`) is built differently, so the hiding rules wouldn't match even if an extension could load. Phone support would need its own set of rules, which hasn't been built.
+
+## Install (desktop)
+
+It isn't on the Chrome Web Store, so you load it manually. It takes about a minute and works on any desktop or laptop.
 
 1. **Get the files.** Click **Code → Download ZIP** at the top of this page and extract it, or run:
    ```bash
@@ -61,8 +81,6 @@ It isn't on the Chrome Web Store, so you load it manually. It takes about a minu
 </p>
 
 **Updating:** download or `git pull` the new files, then click the reload ↻ icon on the extension's card.
-
-> Safari isn't supported. Firefox needs a small manifest change and hasn't been tested.
 
 ## How it works
 
